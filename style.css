@@ -1,0 +1,277 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+}
+.container{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.gameLogos{
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.gameLogos.remove{
+    opacity: 0;
+    visibility: hidden;
+}
+.gameLogos div:nth-child(1), .gameLogos div:nth-child(2) {
+    position: absolute;
+    transition: 3s all;
+}
+.gameLogos div:nth-child(3){
+    position: absolute;
+    transition: 1s ease-in-out;
+}
+.gameLogos div img{
+    width: 100%;
+    height: 100%;
+}
+.text_logo{
+    width: 450px;
+    height: 350px;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+    transition: opacity 3s;
+}
+.fade-in1 {
+    opacity: 0;
+}
+.fade-in1.show {
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+.fade-in.show {
+    animation: fadeIn 1s forwards;
+}
+.fade-in.show {
+    opacity: 1;
+    width: 220px;
+    height: 220px;
+}
+.menuScreen{
+    width: 100%;
+    height: 100%;
+    background-image: url(./assets/image/bridge.jpg);
+    background: linear-gradient(rgba(255, 255, 255, 0.393), rgba(255, 255, 255, 0.534)),
+    url(./assets/image/bridge.jpg);
+    background-size: cover;
+    background-position: center;
+    inset: 0;
+    position: absolute;
+    opacity: 0;
+    overflow: hidden;
+}
+.menuScreen .menu{
+    width: 100%;
+    height: 70px;
+    background-color: black;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+.menuScreen.show{
+    opacity: 1;
+}
+.menuScreen .menu ul{
+    width: 460px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+.menuScreen .menu ul li a{
+    color: #898989;
+    font-family: arial;
+    font-weight: 700;
+    font-size: 20px;
+    text-decoration: none;
+}
+.menuScreen .menu ul li.active a{
+    color: #DFA531;
+}
+
+.menuScreen .menu .social-logo{
+    width: 200px;
+    height: 50px;
+    position: relative;
+}
+.menuScreen .menu .social-logo img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -80%;
+}
+.menuScreen .nico{
+    width: 50%;
+    height: 100%;
+    position: relative;
+}
+.menuScreen .nico img:nth-child(2){
+    width: 63%;
+    position: absolute;
+}
+.menuScreen .nico img:nth-child(3){
+    width: 50%;
+    position: absolute;
+    bottom: 15%;
+    right: 23%;
+}
+.text{
+    width: 800px;
+    height: 150px;
+    position: absolute;
+    left: 95%;
+    top: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.text p{
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    word-spacing: 10px;
+}
+.slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: none;
+}
+.slider.show{
+    display: block;
+}
+.slider .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    visibility: hidden;
+    opacity: 0;
+    animation: slider 20s linear infinite;
+}
+
+.slider .slide > img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+    left: 0;
+    top: 0;
+    animation: zoom-out 15s linear infinite;
+}
+.slider .slide .slide-img {
+    width: 340px;
+    height: 500px;
+    position: absolute;
+    object-fit: cover;
+    left: 40%;
+    bottom: 0;
+    animation: zoom-in 20s linear infinite;
+}
+.slider .slide:nth-child(1) .slide-img {
+    width: 340px;
+    height: 500px;
+    position: absolute;
+    object-fit: cover;
+    left: 7%;
+    bottom: 0;
+    animation: zoom-in 20s linear infinite;
+}
+.slider .slide:nth-child(2) .slide-img {
+    width: 340px;
+    height: 500px;
+    position: absolute;
+    object-fit: cover;
+    left: 60%;
+    bottom: 0;
+    animation: zoom-in 20s linear infinite;
+}
+.slider .slide:nth-child(4) .slide-img {
+    width: 340px;
+    height: 500px;
+    position: absolute;
+    object-fit: cover;
+    left: 60%;
+    bottom: 0;
+    animation: zoom-in 20s linear infinite;
+}
+.slider .slide:nth-child(1) .slide-img img{
+    transform: rotateY(180deg);
+}
+.slider .slide .slide-img img {
+    width: 100%;
+    height: 100%;
+}
+@keyframes slider {
+    0%, 25% {
+        visibility: hidden;
+        opacity: 0;
+    }
+    5%, 20% {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+.slider .slide:nth-child(1) {
+    animation-delay: 0s;
+}
+.slider .slide:nth-child(2) {
+    animation-delay: 5s;
+}
+.slider .slide:nth-child(3) {
+    animation-delay: 10s;
+}
+.slider .slide:nth-child(4) {
+    animation-delay: 15s;
+}
+@keyframes zoom-out {
+    0% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+@keyframes zoom-in {
+    0% {
+        transform: scale(1) translateX(0);
+    }
+    100% {
+        transform: scale(1.4) translateX(-10%);
+    }
+}
