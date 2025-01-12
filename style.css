@@ -201,11 +201,15 @@ body{
     object-fit: cover;
     left: 40%;
     bottom: 0;
-    animation: zoom-in 20s linear infinite;
+    animation: zoom-in 15s linear infinite;
+}
+@media (min-width: 1400px){
+    .slider .slide .slide-img {
+        width: 500px;
+        height: 800px;
+    }
 }
 .slider .slide:nth-child(1) .slide-img {
-    width: 340px;
-    height: 500px;
     position: absolute;
     object-fit: cover;
     left: 7%;
@@ -213,22 +217,18 @@ body{
     animation: zoom-in 20s linear infinite;
 }
 .slider .slide:nth-child(2) .slide-img {
-    width: 340px;
-    height: 500px;
     position: absolute;
     object-fit: cover;
     left: 60%;
     bottom: 0;
-    animation: zoom-in 20s linear infinite;
+    animation: zoom-in 15s linear infinite;
 }
 .slider .slide:nth-child(4) .slide-img {
-    width: 340px;
-    height: 500px;
     position: absolute;
     object-fit: cover;
     left: 60%;
     bottom: 0;
-    animation: zoom-in 20s linear infinite;
+    animation: zoom-in 15s linear infinite;
 }
 .slider .slide:nth-child(1) .slide-img img{
     transform: rotateY(180deg);
