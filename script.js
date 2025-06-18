@@ -1,9 +1,9 @@
-const music2 = document.querySelector('#player2')
-const music = document.querySelector('#player');
+const music2 = document.querySelector('#player2');
 const menuScreen = document.querySelector(".menuScreen");
 const slider = document.querySelector('.slider');
 const gameLogos = document.querySelector('.gameLogos');
 window.onload = function() {
+    const music = document.querySelector('#player');
     const blueLogo = document.querySelector('.logo_blue');
     const yellowLogo = document.querySelector('.logo_yellow');
     const textLogo = document.querySelector('.text_logo');
